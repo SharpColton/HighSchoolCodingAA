@@ -1,0 +1,47 @@
+# Print Hello World
+
+print('Hello, world!')
+
+# This program adds two numbers
+
+num1 = 1.5
+num2 = 6.3
+
+#add two number
+sum = num1 + num2
+
+print(sum)
+# Display the sum
+print('The sum of {0} and {1} is {2}'.format(num1,num2,sum))
+
+
+#store input numbers
+#num3 = input('enter your first number: ')
+#num4 = input('enter your second number: ')
+
+#add two numbers
+#sum1 = float(num3) + float(num4)
+# Display the sum
+#print('The sum of {0} and {1} is {2}'.format(num3,num4,sum1))
+
+
+
+# Python Program to calculate the square root
+
+
+# Note: change this value for a different result
+num5 = 8
+# square root formula In this program, we store the number in num and find the square root using the ** exponent operator. This program works for all positive real numbers. But for negative or complex numbers, it can be done as follows.
+num_sqrt = num5 ** 0.5
+print(num_sqrt)
+
+
+
+# To take the input from the user
+#num = float(input('Enter a number: '))
+
+num_sqrt = num5 ** 0.5
+#%0.3f is %0.3f this is the older form of rounding
+print('The square root of %0.3f is %0.3f'%(num5 ,num_sqrt))
+#New way of rounding
+print(round(num_sqrt,3))
