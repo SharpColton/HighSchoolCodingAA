@@ -1,0 +1,37 @@
+s1 = 5.65
+s2 = 6
+#area of a square
+areOfSquare = s1 * s2
+print('The area of a square is calculated by multipling two of the side together is %0.2f' %areOfSquare)
+areOfSquare1 = s1 ** 2
+print('The area of a square is calculated by squaring one side is %0.2f' %areOfSquare1)
+
+#Question 1
+#What if it is not a perfect square, write a program that allows the user to input two sides
+# and allows for it to be labeled a square or a rectangle using stored values.
+
+
+if value == value: #sides equal
+    #Then this happens
+elif value != value: #sides do not equal
+  #Then this happens
+  
+  
+  
+#Question 2
+#After using stored values take an input from the user and repeat question 1.
+
+
+
+Excersise 
+#What if a user inputs a letter instead of an int?
+#Add expection handling into your program
+# I have given you a good starting point 
+
+while True: #this loop happens over and over until data is a number value entered by the user.
+    try:
+        data=eval(input("Enter a Number: ")) #input must be a number or it prints Invalid input
+        print ("You entered: ",data) #if input is a number then the program does this line
+        break; # break is only executed if the input is numeric
+    except NameError:
+        print ("Invalid input")
