@@ -1,0 +1,12 @@
+#please remove all "e" letters within the test_str, 
+#This will allow you to practice looking up things for your 
+#self when you dont know how to do something, please
+#use the strings.py and google to help you with this assignment.
+
+
+
+# initializing string
+test_str = "GeeksforGeeks"
+
+# initializing removal character
+rem_char = "e"
