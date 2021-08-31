@@ -1,0 +1,335 @@
+# What is if...else statement in Python?
+# Decision making is required when we want to execute a code only if a certain condition is satisfied.
+#
+# The if…elif…else statement is used in Python for decision making.
+#
+# Python if Statement Syntax
+# if test expression:
+#     statement(s)
+# Here, the program evaluates the test expression and will execute statement(s) only if the test expression is True.
+#
+# If the test expression is False, the statement(s) is not executed.
+#
+# In Python, the body of the if statement is indicated by the indentation. The body starts with an indentation and the first unindented line marks the end.
+#
+# Python interprets non-zero values as True. None and 0 are interpreted as False.
+
+
+# If the number is positive, we print an appropriate message
+
+num = 3
+if num > 0:
+    print(num, "is a positive number.")
+print("This is always printed.")
+
+num = -1
+if num > 0:
+    print(num, "is a positive number.")
+print("This is also always printed.")
+
+
+
+
+
+# Python if...else Statement
+# Syntax of if...else
+# if test expression:
+#     Body of if
+# else:
+#     Body of else
+# The if..else statement evaluates test expression and will execute the body of if only when the test condition is True.
+#
+# If the condition is False, the body of else is executed. Indentation is used to separate the blocks.
+#
+# Python if..else Flowchart
+
+
+
+
+
+# Program checks if the number is positive or negative
+# And displays an appropriate message
+
+num = 3
+
+# Try these two variations as well.
+# num = -5
+# num = 0
+
+if num >= 0:
+    print("Positive or Zero")
+else:
+    print("Negative number")
+
+
+
+
+
+
+
+
+
+# Python if...elif...else Statement
+# Syntax of if...elif...else
+# if test expression:
+#     Body of if
+# elif test expression:
+#     Body of elif
+# else:
+#     Body of else
+# The elif is short for else if. It allows us to check for multiple expressions.
+#
+# If the condition for if is False, it checks the condition of the next elif block and so on.
+#
+# If all the conditions are False, the body of else is executed.
+#
+# Only one block among the several if...elif...else blocks is executed according to the condition.
+#
+# The if block can have only one else block. But it can have multiple elif blocks.
+
+
+
+# '''In this program,
+# we check if the number is positive or
+# negative or zero and
+# display an appropriate message'''
+
+num = 3.4
+
+# Try these two variations as well:
+# num = 0
+# num = -4.5
+
+if num > 0:
+    print("Positive number")
+elif num == 0:
+    print("Zero")
+else:
+    print("Negative number")
+
+
+
+
+'''In this program, we input a number
+check if the number is positive or
+negative or zero and display
+an appropriate message
+This time we use nested if statement'''
+
+num = float(input("Enter a number: "))
+if num >= 0:
+    if num == 0:
+        print("Zero")
+    else:
+        print("Positive number")
+else:
+    print("Negative number")
+
+
+
+
+# Program to find the sum of all numbers stored in a list
+
+# List of numbers
+numbers = [6, 5, 3, 8, 4, 2, 5, 4, 11]
+
+# variable to store the sum
+sum = 0
+
+# iterate over the list
+for val in numbers:
+    sum = sum+val
+
+print("The sum is", sum)
+
+
+
+# The range() function
+# We can generate a sequence of numbers using range() function. range(10) will generate numbers from 0 to 9 (10 numbers).
+#
+# We can also define the start, stop and step size as range(start, stop,step_size). step_size defaults to 1 if not provided.
+#
+# The range object is "lazy" in a sense because it doesn't generate every number that it "contains" when we create it. However, it is not an iterator since it supports in, len and __getitem__ operations.
+#
+# This function does not store all the values in memory; it would be inefficient. So it remembers the start, stop, step size and generates the next number on the go.
+#
+# To force this function to output all the items, we can use the function list().
+#
+# The following example will clarify this.
+
+print(range(10))
+
+print(list(range(10)))
+
+print(list(range(2, 8)))
+
+print(list(range(2, 20, 3)))
+
+
+# Program to iterate through a list using indexing
+
+genre = ['pop', 'rock', 'jazz']
+
+# iterate over the list using index
+for i in range(len(genre)):
+    print("I like", genre[i])
+
+
+
+
+
+
+# for loop with else
+# A for loop can have an optional else block as well. The else part is executed if the items in the sequence used in for loop exhausts.
+#
+# The break keyword can be used to stop a for loop. In such cases, the else part is ignored.
+#
+# Hence, a for loop's else part runs if no break occurs.
+#
+# Here is an example to illustrate this.
+
+digits = [0, 1, 5]
+
+for i in digits:
+    print(i)
+else:
+    print("No items left.")
+
+
+
+
+# program to display student's marks from record
+student_name = 'Soyuj'
+
+marks = {'James': 90, 'Jules': 55, 'Arthur': 77}
+
+for student in marks:
+    if student == student_name:
+        print(marks[student])
+        break
+else:
+    print('No entry with that name found.')
+
+
+
+
+# What is while loop in Python?
+# The while loop in Python is used to iterate over a block of code as long as the test expression (condition) is true.
+#
+# We generally use this loop when we don't know the number of times to iterate beforehand.
+#
+# Syntax of while Loop in Python
+# while test_expression:
+#     Body of while
+# In the while loop, test expression is checked first. The body of the loop is entered only if the test_expression evaluates to True. After one iteration, the test expression is checked again. This process continues until the test_expression evaluates to False.
+#
+# In Python, the body of the while loop is determined through indentation.
+#
+# The body starts with indentation and the first unindented line marks the end.
+#
+# Python interprets any non-zero value as True. None and 0 are interpreted as False
+
+
+
+# Program to add natural
+# numbers up to
+# sum = 1+2+3+...+n
+
+# To take input from the user,
+# n = int(input("Enter n: "))
+
+n = 10
+
+# initialize sum and counter
+sum = 0
+i = 1
+
+while i <= n:
+    sum = sum + i
+    i = i+1    # update counter
+
+# print the sum
+print("The sum is", sum)
+
+
+# In the above program, the test expression will be True as long as our counter variable i is less than or equal to n (10 in our program).
+#
+# We need to increase the value of the counter variable in the body of the loop. This is very important (and mostly forgotten). Failing to do so will result in an infinite loop (never-ending loop).
+#
+# Finally, the result is displayed.
+
+
+
+
+'''Example to illustrate
+the use of else statement
+with the while loop'''
+
+counter = 0
+
+while counter < 3:
+    print("Inside loop")
+    counter = counter + 1
+else:
+    print("Inside else")
+
+
+
+
+
+
+
+
+# Python break and continue
+# In this article, you will learn to use break and continue statements to alter the flow of a loop.
+#
+# Video: Python break and continue Statement
+#
+# What is the use of break and continue in Python?
+# In Python, break and continue statements can alter the flow of a normal loop.
+#
+# Loops iterate over a block of code until the test expression is false, but sometimes we wish to terminate the current iteration or even the whole loop without checking test expression.
+#
+# The break and continue statements are used in these cases.
+#
+# Python break statement
+# The break statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.
+#
+# If the break statement is inside a nested loop (loop inside another loop), the break statement will terminate the innermost loop.
+
+# Use of break statement inside the loop
+
+for val in "string":
+    if val == "i":
+        break
+    print(val)
+
+print("The end")
+
+
+
+# Program to show the use of continue statement inside loops
+
+for val in "string":
+    if val == "i":
+        continue
+    print(val)
+
+print("The end")
+
+# What is pass statement in Python?
+# In Python programming, the pass statement is a null statement. The difference between a comment and a pass statement in Python is that while the interpreter ignores a comment entirely, pass is not ignored.
+#
+# However, nothing happens when the pass is executed. It results in no operation (NOP).
+'''pass is just a placeholder for
+functionality to be added later.'''
+sequence = {'p', 'a', 's', 's'}
+for val in sequence:
+    pass
+
+def function(args):
+    pass
+
+class Example:
+    pass
+
