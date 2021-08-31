@@ -1,0 +1,339 @@
+# this is the first comment
+spam = 1  # and this is the second comment
+          # ... and now a third!
+print(spam)
+text = "# This is not a comment because it's inside quotes."
+print(text)
+print('spam eggs')  # single quotes
+print('doesn\'t')  # use \' to escape the single quote...
+print("doesn't")  # ...or use double quotes instead
+print('"Yes," they said.')
+print("\"Yes,\" they said.")
+print('"Isn\'t," they said.')
+print('##############################################################')
+
+
+
+
+print('C:\some\name')  # here \n means newline!
+#C:\some
+#ame
+print(r'C:\some\name')  # note the r before the quote
+#C:\some\name
+
+
+
+print('##############################################################')
+
+
+
+word = 'Python'
+print(word[0])  # character in position 0
+#'P'
+print(word[5])  # character in position 5
+#'n'
+print('##############################################################')
+
+print(word[-1])  # last character
+'n'
+print(word[-2])  # second-last character
+'o'
+print(word[-6])
+'P'
+print('##############################################################')
+
+# defining strings in Python
+# all of the following are equivalent
+my_string = 'Hello'
+print(my_string)
+
+my_string = "Hello"
+print(my_string)
+
+my_string = '''Hello'''
+print(my_string)
+
+# triple quotes string can extend multiple lines
+my_string = """Hello, welcome to
+           the world of Python"""
+print(my_string)
+
+print('##############################################################')
+#How to access characters in a string?
+#We can access individual characters using indexing and a range of characters using slicing. Index starts from 0. Trying to access a character out of index range will raise an IndexError. The index must be an integer. We can't use floats or other types, this will result into TypeError.
+
+#Python allows negative indexing for its sequences.
+
+#The index of -1 refers to the last item, -2 to the second last item and so on. We can access a range of items in a string by using the slicing operator :(colon).
+
+print('##############################################################')
+
+#Accessing string characters in Python
+str = 'programiz'
+print('str = ', str)
+
+#first character
+print('str[0] = ', str[0])
+
+#last character
+print('str[-1] = ', str[-1])
+
+#slicing 2nd to 5th character
+print('str[1:5] = ', str[1:5])
+
+#slicing 6th to 2nd last character
+print('str[5:-2] = ', str[5:-2])
+
+print('##############################################################')
+
+
+
+
+
+
+#Python List
+#In this tutorial, we'll learn everything about Python lists, how they are created, slicing of a list, adding or removing elements from them and so on.
+
+
+
+#Python offers a range of compound data types often referred to as sequences. List is one of the most frequently used and very versatile data types used in Python.
+
+#How to create a list?
+#In Python programming, a list is created by placing all the items (elements) inside square brackets [], separated by commas.
+
+#It can have any number of items and they may be of different types (integer, float, string etc.).
+
+
+
+# empty list
+my_list = []
+print(my_list)
+# list of integers
+my_list = [1, 2, 3]
+print(my_list)
+# list with mixed data types
+my_list = [1, "Hello", 3.4]
+print(my_list)
+# nested list
+my_list = ["mouse", [8, 4, 6], ['a']]
+print(my_list)
+
+
+print('##############################################################')
+# List indexing
+
+my_list = ['p', 'r', 'o', 'b', 'e']
+
+# Output: p
+print(my_list[0])
+
+# Output: o
+print(my_list[2])
+
+# Output: e
+print(my_list[4])
+
+# Nested List
+n_list = ["Happy", [2, 0, 1, 5]]
+
+# Nested indexing
+print(n_list[0][1])
+
+print(n_list[1][3])
+
+# Error! Only integer can be used for indexing
+#print(my_list[4.0])
+
+
+
+# Negative indexing in lists
+my_list = ['p','r','o','b','e']
+
+print(my_list[-1])
+
+print(my_list[-5])
+
+# List slicing in Python
+
+my_list = ['p','r','o','g','r','a','m','i','z']
+
+# elements 3rd to 5th
+print(my_list[2:5])
+
+# elements beginning to 4th
+print(my_list[:-5])
+
+# elements 6th to end
+print(my_list[5:])
+
+# elements beginning to end
+print(my_list[:])
+
+
+
+# Correcting mistake values in a list
+odd = [2, 4, 6, 8]
+
+# change the 1st item
+odd[0] = 1
+
+print(odd)
+
+# change 2nd to 4th items
+odd[1:4] = [3, 5, 7]
+
+print(odd)
+
+
+
+
+# Appending and Extending lists in Python
+odd = [1, 3, 5]
+
+odd.append(7)
+
+print(odd)
+
+odd.extend([9, 11, 13])
+
+print(odd)
+
+
+# Concatenating and repeating lists
+odd = [1, 3, 5]
+
+print(odd + [9, 7, 5])
+
+print(["re"] * 3)
+
+
+
+
+# Demonstration of list insert() method
+odd = [1, 9]
+odd.insert(1,3)
+
+print(odd)
+
+odd[2:2] = [5, 7]
+
+print(odd)
+
+
+
+
+# Deleting list items
+my_list = ['p', 'r', 'o', 'b', 'l', 'e', 'm']
+
+# delete one item
+del my_list[2]
+
+print(my_list)
+
+# delete multiple items
+del my_list[1:5]
+
+print(my_list)
+
+# delete entire list
+del my_list
+
+# Error: List not defined
+#print(my_list)
+
+
+my_list = ['p','r','o','b','l','e','m']
+my_list.remove('p')
+
+# Output: ['r', 'o', 'b', 'l', 'e', 'm']
+print(my_list)
+
+# Output: 'o'
+print(my_list.pop(1))
+
+# Output: ['r', 'b', 'l', 'e', 'm']
+print(my_list)
+
+# Output: 'm'
+print(my_list.pop())
+
+# Output: ['r', 'b', 'l', 'e']
+print(my_list)
+
+my_list.clear()
+
+# Output: []
+print(my_list)
+
+##Exercise
+#in this exercise you will store class names in a list for first and last name. FirstName, LastName.
+#You will need to store only your first and last name in a variable called MyFirstName and MyLastName.
+#You will then need to create a variable called EmailDomain that stores the school's domain of ascensionacademy.org
+
+#Then put all your variables together in the right order. Remember that your email is the first letter of your first name, your last name, the AT symbol and then the school's domain.
+
+
+#After you have your email you will print out the following message with the correct information using the variables created above.
+
+#Welcome First Name,
+#Thank you for your application to Ascension Academy.
+#We are happy to inform, Full Name, have been accepted to Ascension Academy and your email for school from today forward will be <insert email>.
+
+#Ballew, Ashtan J.
+#Brantley, Wesley D. (Wes)
+#Cruz, Reagan A.
+#Hajje, John M.
+#Henderson, Seth
+#Jones, Benjamin W.
+#Norris, Keltan S.
+#Srikanth, Aditya
+#Swadling, Colson J.
+
+
+
+
+FirstName = ['Ashtan','Wes','Reagon','John','Seth','Ben','Keltan','Aditya','Colson','Colton']
+LastName = ['Ballew','Brantley','Cruz','Hajje','Henderson','Jones','Norris','Sritkanth','Swadling','Sharp']
+
+print(FirstName)
+print(LastName)
+
+
+print(FirstName[9])
+print(LastName[9])
+
+MyFirstName = FirstName[9]
+print(MyFirstName[0])
+
+MyLastName = LastName[9]
+
+print(MyLastName)
+
+EmailDomain = 'ascensionacademy.org'
+MyEmail = MyFirstName[0]+MyLastName+'@'+EmailDomain
+print(MyEmail)
+
+
+print('Welcome' + MyFirstName + ',')
+print('Thank you for your application to Ascension Academy.')
+print('We are happy to inform, ' + MyFirstName + MyLastName+','+ ' have been accepted to Ascension Academy \n and your email for school from today forward will be ' + MyEmail+'.')
+
+
+
+
+
+# initializing string
+test_str = "GeeksforGeeks"
+
+# initializing removal character
+rem_char = "e"
+
+# printing original string
+print("The original string is : " + test_str)
+
+# Using replace()
+# Deleting all occurrences of character
+res = test_str.replace(rem_char, "")
+
+# printing result
+print("The string after character deletion : " + res)
