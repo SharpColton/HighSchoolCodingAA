@@ -14,7 +14,7 @@ print('The area of a square is calculated by squaring one side is %0.2f' %areOfS
 if value == value: #sides equal
     #Then this happens
 elif value != value: #sides do not equal
-  #Then this happens
+    #Then this happens
   
   
   
