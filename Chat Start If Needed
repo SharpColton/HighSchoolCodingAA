@@ -1,0 +1,59 @@
+#import section
+
+
+
+
+
+
+
+
+#def storage
+def isWordPresent(sentence, word):
+    # To break the sentence in words
+    s = sentence.split(" ")
+
+    for i in s:
+
+        # Comparing the current word
+        # with the word to be searched
+        if (i == word):
+            return True
+    return False
+
+
+# Variables to be stored here
+name = "Colton Sharp"
+selectChange = "change"
+changename = "name"
+changelocation = "location"
+#task listing vaibles for while loops
+task1 = 0
+task2 = 0
+
+
+while task1 == 0:
+    userinput = input("How may I help")
+    #name or location change
+    if (isWordPresent(userinput, selectChange)):
+        print("What would you like to change?")
+        print("You can change your location or your name that I call you.")
+        #user selects name to change
+        while task2 == 0:
+            nameinput = input("Name or Location")
+            if (isWordPresent(nameinput, changename)):
+                print("You have selected to change your name.")
+                name = input("What would you like to be called form now on?")
+                #repeat if answer is empty or a space
+                if name == "" or name == " ":
+                    print("you must enter something for me to call you")
+                    name = input("What would you like to be called form now on?")
+                #loop back into the main user input becasue the task is complete
+                else:
+                    print("I will now call you " + name + " from now on.")
+                    
+                    task2 = 1
+            #loop back becasue soomething was not answered
+            else:
+                print("I did not understand your input: please try again")
+    else:
+        print("I did not understand your input: please try again.")
